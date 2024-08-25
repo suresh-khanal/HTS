@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+  }
+  body {  
+    padding-top: 5px;
+    overflow: hidden;
+  }
+  
+  #map-container {
+    height: 100%;
+    width: 100% !important;
+    padding: 0;
+    overflow:hidden;
+  }
+  
+  #map {
+    height: 100%; 
+    width: 100%; 
+    overflow: hidden; 
+  }
+  
+      .navbar .navbar-brand {
+        font-size: 16px;
+      }
+      body {
+        overflow-y: hidden;
+        overflow-x:hidden;
+      }
+      .fixed-table-toolbar {
+        display: block;
+      }
+         .bootstrap-table .fixed-table-container .fixed-table-body{
+        overflow: auto;
+      }  
+
+      .ol-tooltip {
+        position: absolute;
+        background-color: white;
+        -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #cccccc;
+        bottom: 17px;
+        left: -50px;
+        min-width: 170px;
+        z-index: 10;
+      }
+      .ol-tooltip:after, .ol-tooltip:before {
+        top: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+      .ol-tooltip:after {
+        border-top-color: white;
+        border-width: 10px;
+        left: 48px;
+        margin-left: -10px;
+      }
+      .ol-tooltip:before {
+        border-top-color: #cccccc;
+        border-width: 11px;
+        left: 48px;
+        margin-left: -11px;
+      }
+       .ol-tooltip p {
+         margin-top: 0;
+         margin-bottom: 0;
+       }
+    
