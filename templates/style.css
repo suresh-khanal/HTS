@@ -17,7 +17,7 @@ html, body {
   }
   
   #map {
-    height: 100%; 
+    height: 95%; 
     width: 100%; 
     overflow: hidden; 
   }
@@ -74,4 +74,43 @@ html, body {
          margin-top: 0;
          margin-bottom: 0;
        }
-    
+       .ol-control.ol-feature-list > button {
+        background-color:rgb(55, 240, 8);
+        scale:1.2;
+       }
+
+       .ol-feature-list .ol-header {
+        background-color:rgb(36, 34, 34);
+        color: white;
+        font-size: large;
+        font-style: italic;
+       }
+
+       .ol-feature-list table thead {
+        background-color:rgb(36, 34, 34);
+        color: white;
+        text-align: center;
+       }
+       .ol-feature-list table {
+        border-collapse: initial;
+       }
+
+       .ol-feature-list table td {
+        border: 0 solid #3f3e3e;
+       }
+
+       .ol-feature-list table tbody tr.ol-selected {
+        background-color: #40c8f9;
+       }
+
+       .ol-closebox {
+        color: red !important;
+       }
+
+       .ol-control.ol-feature-list {
+        width: 100%
+       }
+       .ol-feature-list table {
+        width:100% !important;
+        white-space: nowrap;
+       }
