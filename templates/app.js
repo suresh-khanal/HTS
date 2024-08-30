@@ -121,3 +121,41 @@ map.on('pointermove', function(evt) {
     }
 });
 
+
+// Select  interaction
+var selecti = new ol.interaction.Select({
+    hitTolerance: 5,
+    condition: ol.events.condition.singleClick
+  });
+  map.addInteraction(selecti);
+  
+  // Select feature when click on the reference index
+  selecti.on('select', function(e) {
+    var f = e.selected[0];
+    if (f) {      
+      listCtrl.select(f)
+    }
+  });
+
+  // Select control
+  var listCtrl = new ol.control.FeatureList({
+    title: 'Tunnels',   
+    collapsed: false,
+    features: tunnel.getSource(),    
+  });
+
+  listCtrl.enableSort('nom', 'region', 'mag')
+  map.addControl (listCtrl);
+  listCtrl.on('select', function(e) {
+    selecti.getFeatures().clear();
+    selecti.getFeatures().push(e.feature);    
+  });
+
+  listCtrl.on('dblclick', function(e) {
+    map.getView().fit(e.feature.getGeometry().getExtent())
+    map.getView().setZoom(map.getView().getZoom() - 1)
+  })
+
+  listCtrl.on(['resize', 'collapse', 'sort'], function(e) {
+    console.log(e)
+  })
